@@ -2,7 +2,7 @@
     "manifest_version": 2,
     "name": "ViewTime",
     "description": "Shows you how long a YouTube video has been watched for.",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "update_url": "http://updates.benburwell.com/chrome.xml",
     "homepage_url": "http://www.benburwell.com/projects/viewtime/",
     "icons": {
