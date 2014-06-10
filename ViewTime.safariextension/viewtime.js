@@ -1,6 +1,8 @@
 var key = 'AIzaSyBXNlRBQ6ckrnDYVgCIPHCiN3-UJtYfmbY';
 
+var iso8601 = /^PT((\d+)D)?((\d+)H)?((\d+)M)?((\d+)S)?$/;
 var r = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+
 var match = window.location.href.match(r);
 if (match && match[2].length == 11) {
     var id = match[2];
@@ -14,16 +16,20 @@ if (match && match[2].length == 11) {
         }
 
         var duration = data.items[0].contentDetails.duration;
-        var mins = duration.substring(2).split('M')[0];
-        var secs = duration.substring(2).split('M')[1].slice(0, -1);
+        var matches = duration.match(iso8601);
+        console.log(matches);
+        var d = {
+            days: parseFloat(matches[2], 10),
+            hours: parseFloat(matches[4], 10),
+            minutes: parseFloat(matches[6], 10),
+            seconds: parseFloat(matches[8], 10)
+        };
+
+        duration = moment.duration(d);
         var views = data.items[0].statistics.viewCount;
+        var new_secs = duration.asSeconds() * views;
+        var m = moment.duration(new_secs, 'seconds');
 
-        var new_mins = mins * views;
-        var new_secs = secs * views;
-
-        var m = moment.duration(new_mins, 'minutes');
-        m.add(new_secs, 'seconds');
-
-        $('span.watch-view-count').after('<div>Watched for ' + m.humanize() + '</div>');
+        $('span.watch-view-count').after('<div>Watched for about ' + m.humanize() + '</div>');
     });
 }
