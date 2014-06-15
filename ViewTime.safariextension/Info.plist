@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>Chrome</key>
 	<dict/>
 	<key>Content</key>
@@ -36,8 +36,6 @@
 		<array>
 			<string>http://www.youtube.com/watch*</string>
 			<string>https://www.youtube.com/watch*</string>
-			<string>http://www.youtube.com/user/*</string>
-			<string>https://www.youtube.com/user/*</string>
 		</array>
 	</dict>
 	<key>Description</key>

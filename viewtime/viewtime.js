@@ -1,11 +1,11 @@
 var key = 'AIzaSyBXNlRBQ6ckrnDYVgCIPHCiN3-UJtYfmbY';
 
 var iso8601 = /^PT((\d+)D)?((\d+)H)?((\d+)M)?((\d+)S)?$/;
-var r = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+var r = /\/watch\?(?:.+=.+&)?v=([^&]+)/;
 
 var match = window.location.href.match(r);
-if (match && match[2].length == 11) {
-    var id = match[2];
+if (match && match[1].length == 11) {
+    var id = match[1];
 
     $.getJSON('https://www.googleapis.com/youtube/v3/videos?id='
     + id + '&part=contentDetails,statistics&key=' + key, function(data) {

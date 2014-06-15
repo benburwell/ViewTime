@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "ViewTime",
+    "name": "YouTube ViewTime",
+    "short_name": "ViewTime",
+    "version": "1.0.3",
     "description": "Shows you how long a YouTube video has been watched for.",
-    "version": "1.0.2",
-    "update_url": "http://updates.benburwell.com/chrome.xml",
     "homepage_url": "http://www.benburwell.com/projects/viewtime/",
     "icons": {
         "16": "Icon-16.png",
@@ -18,9 +18,7 @@
         {
             "matches": [
                 "http://www.youtube.com/watch*",
-                "https://www.youtube.com/watch*",
-                "http://www.youtube.com/user/*",
-                "https://www.youtube.com/user/*"
+                "https://www.youtube.com/watch*"
             ],
             "js": [
                 "jquery.js",
