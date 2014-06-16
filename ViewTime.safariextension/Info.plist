@@ -7,15 +7,15 @@
 	<key>Builder Version</key>
 	<string>9537.76.4</string>
 	<key>CFBundleDisplayName</key>
-	<string>ViewTime</string>
+	<string>ViewTime for YouTube</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.benburwell.viewtime</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.3</string>
+	<string>1.0.4</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.3</string>
+	<string>1.0.4</string>
 	<key>Chrome</key>
 	<dict/>
 	<key>Content</key>
