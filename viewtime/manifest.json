@@ -1,9 +1,9 @@
 {
     "manifest_version": 2,
-    "name": "ViewTime for YouTube",
+    "name": "ViewTime for YouTube™",
     "short_name": "ViewTime",
     "version": "1.0.6",
-    "description": "Shows you how long a YouTube video has been watched for.",
+    "description": "Shows you how long a YouTube™ video has been watched for.",
     "homepage_url": "http://www.benburwell.com/projects/viewtime/",
     "icons": {
         "16": "Icon-16.png",
